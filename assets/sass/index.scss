@@ -1,0 +1,65 @@
+@import "reset";
+
+body {
+    display: grid;
+    grid-template-rows: 15vh 80vh 5vh;
+    background-color: black;
+    
+    header {
+        text-align: center;
+        
+        h1 {
+            margin-top: 20px;
+            color: blue;
+            font-size: 3rem;
+            font-weight:800;
+        }
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        section {
+            background-color: #12EAEA;
+            box-shadow: 1px 2px 20px blue;
+            margin: 20px;
+            border-radius: 20px;
+            
+            form {
+                margin-left: 140px;
+                
+                fieldset {
+                    border: none;
+                    color:blue;
+                    font-size:1.1rem;
+                    
+                    label {
+                    	width: 200px;
+                    	float: left;
+                    }
+                }
+                
+                fieldset:last-of-type {
+                    margin-top: 50px;
+                    text-align: center;
+                    
+                    input {
+                        background-color:blue;
+                        color:white;
+                        margin-right: 130px;
+                        padding: 10px 20px 10px 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+            h2 {
+                margin: 50px 0 50px 0;
+                color: blue;
+                text-align: center;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

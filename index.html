@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Base de données JS</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Projet Yepages</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Connexion</h2>
+            <form method="post">
+                <fieldset>
+                    <label for="email1">Email</label>
+                    <input type="text" name="email1" id="email1" />
+                </fieldset>
+                <fieldset>
+                    <label for="password1">Mot de passe</label>
+                    <input type="password" name="password" id="password1" />
+                </fieldset>
+                <fieldset>
+                    <input type="submit" value="Je me connecte" />
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Inscription</h2>
+            <form method="post" id="user-information">
+                <fieldset>
+                    <label for="username">Pseudo</label>
+                    <input type="text" name="username" id="username" />
+                </fieldset>
+                <fieldset>
+                    <label for="email2">Email</label>
+                    <input type="text" name="email2" id="email2" />
+                </fieldset>
+                <fieldset>
+                    <label for="password2">Mot de passe</label>
+                    <input type="password" name="password2" id="password2" />
+                </fieldset>
+                <fieldset>
+                    <label for="confirmpassword">Confirmation mot de passe</label>
+                    <input type="password" name="confirmpassword" id="confirmpassword" />
+                </fieldset>
+                <fieldset>
+                    <label for="firstname">Prénom</label>
+                    <input type="text" name="firstname" id="firstname" />
+                </fieldset>
+                <fieldset>
+                    <label for="lastname">Nom</label>
+                    <input type="text" name="lastname" id="lastname" />
+                </fieldset>
+                <fieldset>
+                    <label for="urlimageprofil">URL image de profil</label>
+                    <input type="url" name="urlimageprofil" id="urlprofilepic" />
+                </fieldset>
+                <fieldset>
+                    <input type="submit" value="Je m'inscris" />
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <script type="module" src="assets/js/index.js"></script>
+</body>
+
+</html>
