@@ -62,11 +62,14 @@ class UserManager {
     }
 
     createUser(user) {
-        if (this.#users.email === user.email) {
-            return alert("Cet email déjà utilisé.");
-        }
-        else {
-            return this.#users.push(user);
+        for (let i = 0; i < this.#users.length; i++){
+            
+            if (this.#users[i].email === user.email) {
+                return alert("Cet email est déjà utilisé.");
+            }
+            else {
+                this.#users.push(user);
+            }
         }
     }
 
@@ -85,14 +88,25 @@ class UserManager {
             }
         }
     }
+    
+    login(username, password) {
+        let userRegistered = JSON.parse(localStorage.getItem("user"));
+        if (this.#users.email === userRegistered.email) {
+            return alert("Email");
+        }
+        else if (this.#users.password === userRegistered.password) {
+            return alert("Mdp");
+        }
+    }
 
     save() {
         let jsonUser = JSON.stringify(this.#users);
-        sessionStorage.setItem("user", jsonUser);
+        localStorage.setItem("user", jsonUser);
     }
 
     load() {
-        let usersStorage = JSON.parse(sessionStorage.getItem("user"));
+        let usersStorage = JSON.parse(localStorage.getItem("user"));
+        console.log(usersStorage);
 
         if (usersStorage !== null) {
             for (let i = 0; i < usersStorage.length; i++) {

@@ -92,17 +92,16 @@ class BookManager {
 
     save() {
         let jsonBook = JSON.stringify(books);
-        sessionStorage.setItem("books", jsonBook);
+        localStorage.setItem("books", jsonBook);
     }
 
     load() {
-        let booksStorage = JSON.parse(sessionStorage.getItem("books"));
-        let newBooks = [];
+        let booksStorage = JSON.parse(localStorage.getItem("books"));
 
         for (let i = 0; i < booksStorage.length; i++) {
             let parseBook = JSON.parse(booksStorage[i]);
             let newBook = new Book(parseBook.id, parseBook.title, parseBook.author, parseBook.publicationDate, parseBook.totalPages, parseBook.excerpt, parseBook.coverImage);
-            newBooks.push(newBook);
+            this.#books.push(newBook);
         }
     }
 }
